@@ -1,0 +1,44 @@
+$violet-light: #5A1BA5;
+$violet-dark: #461483;
+$white: #ffffff;
+$grey-light: #868686;
+$grey-dark: #424242;
+$menu-color: #d7b7ff;
+$menu-footer: #B0B0B0;
+
+
+header {
+    .menu-white, .show {
+        color: $white!important;
+        text-decoration: none;
+        &:active , &:visited, &:active, &:focus {
+            color: $white!important;
+            text-decoration: none;
+        }}
+}
+
+.drop-violet {
+    &:active{
+        background-color: $violet-light;
+    }
+}
+
+#form-imput-search {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.logo {
+    height: 40px;
+}
+
+.top-header {
+    background-color: $violet-dark
+}
+.nav-link {
+    color: $white;
+    &:hover {
+        color: $white;
+    }
+}
