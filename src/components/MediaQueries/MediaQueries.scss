@@ -1,0 +1,122 @@
+@media (max-width:1024px) {
+    header {
+        top: -2rem;
+
+        .nav-right {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+    .section-servicios {
+        flex-direction: column;
+
+        .servicios-title {
+            width: 100%;
+
+            h3,
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    .cards-grid-3-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-background {
+        height: 30vh;
+    }
+}
+
+@media (max-width:913px) {
+    .footer-hero {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width:768px) {
+    .hero {
+        flex-direction: column;
+
+        .hero-text {
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero-img {
+            width: 80%;
+        }
+    }
+
+    .professionals {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .cards-servicios {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+        grid-template-rows: auto;
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .card-veterinary {
+        flex-direction: row-reverse;
+
+        .vet-title {
+            text-align: start;
+        }
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-menu {
+        ul {
+            justify-content: space-evenly;
+        }
+    }
+
+    .cat-highlighted-item {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 556px) {
+    header {
+        position: relative;
+        top: 0px;
+    }
+}
+
+@media (max-width:480px) {
+    .section-servicios {
+        width: 90%;
+    }
+
+    .card-service {
+        text-align: center;
+        align-items: center;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+@media (max-width:375px) {
+    .card-veterinary {
+        flex-direction: column;
+
+        .vet-title {
+            text-align: center;
+        }
+    }
+}
