@@ -3,10 +3,9 @@ import MainLayout from "./layouts/MainLayout"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
 function App() {
-
   return (
       < MainLayout>
-      < ItemListContainer greeting="Bienvenidos a Michigan"/>
+      < ItemListContainer/>
       </MainLayout>
   )
 }
