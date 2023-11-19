@@ -1,28 +1,37 @@
-import React from 'react';
-import { Card, Button } from "react-bootstrap"
+import React from 'react'
+import { Card } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { productos } from "../../json/productos.js"
+import "./ItemListContainer.scss"
+import {FilterComponent} from '../FilterComponent'
+import { Link } from 'react-router-dom'
 
-const ItemListContainer = () => {
-    return (
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="products">
-            {productos.map((producto) => (
-                <div className="col" key={producto.id}>
-                    <Card>
-                    <Card.Img variant="top" src={`../../assets/img/${producto.rutaImagen}`} />
+export const ItemListContainer = ({ products }) => {
+
+  return (
+    <div className="container">
+      <div className="row">
+      <FilterComponent products={products}/>
+        <div className="col-12 col-md-9">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            {products.map((product) => {
+              return (
+                <div className="col" key={product.id}>
+                  <Card key={product.id} className="h-100">
+                    <Link to={`/item/${product.id}`}><Card.Img variant="top" src={product.thumbnail} /></Link>
                     <Card.Body>
-                        <Card.Title>{producto.nombre}</Card.Title>
-                        <Card.Text>{producto.marca}</Card.Text>
-                        <Card.Text>{producto.stock}</Card.Text>
-                        <Card.Text>{producto.id}</Card.Text>
-                        <Button variant="btn btn-primary btn-sm btn-violet">Agregar al carrito <FontAwesomeIcon icon={faCartShopping} /></Button>
+                      <Card.Title>{product.title}</Card.Title>
+                      <Card.Text>{product.brand}</Card.Text>
+                      <Card.Text>{product.price}</Card.Text>
+                      <button type="button" className="btn btn-primary btn-sm btn-violet">Agregar al carrito <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></button>
                     </Card.Body>
-                    </Card>
+                  </Card>
                 </div>
-            ))}
+              )
+            })}
+          </div>
+        </div>
+      </div>
     </div>
-    )
+  )
 }
-
-export default ItemListContainer

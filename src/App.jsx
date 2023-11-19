@@ -1,12 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import MainLayout from "./layouts/MainLayout"
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+import { MainRouter } from "./routes/MainRouter"
 
 function App() {
   return (
+    <div>
       < MainLayout>
-      < ItemListContainer/>
+        < MainRouter />
       </MainLayout>
+    </div>
   )
 }
 

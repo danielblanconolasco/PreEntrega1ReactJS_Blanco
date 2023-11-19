@@ -9,7 +9,7 @@ const FooterComponent = () => {
         <div className="container-footer">
             <div className="footer-hero">
                 <div className="footer-img">
-                    <img src="./assets/img/logo-footer.png" alt=""/>
+                    <img src="/assets/img/logo-footer.png" alt=""/>
                 </div>
             </div>
         </div>
