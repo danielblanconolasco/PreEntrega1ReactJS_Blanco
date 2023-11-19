@@ -3,7 +3,6 @@ import { Card } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import "./ItemListContainer.scss"
-import {FilterComponent} from '../FilterComponent'
 import { Link } from 'react-router-dom'
 
 export const ItemListContainer = ({ products }) => {
@@ -11,9 +10,8 @@ export const ItemListContainer = ({ products }) => {
   return (
     <div className="container">
       <div className="row">
-      <FilterComponent products={products}/>
-        <div className="col-12 col-md-9">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <div className="col-12">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
             {products.map((product) => {
               return (
                 <div className="col" key={product.id}>
