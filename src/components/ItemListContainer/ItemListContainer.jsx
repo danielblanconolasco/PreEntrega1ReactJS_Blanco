@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export const ItemListContainer = ({ products }) => {
 
   return (
-    <div className="container">
+    <div className="container">npm 
       <div className="row">
         <div className="col-12">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
