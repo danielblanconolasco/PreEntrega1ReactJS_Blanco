@@ -3,18 +3,8 @@ import 'bootstrap/dist/js/bootstrap.bundle'
 import "./NavBarComponent.scss"
 import CartWidgetComponent from "../CartWidgetComponent/CartWidgetComponent"
 import { Link } from "react-router-dom"
-import { useEffect, useState } from 'react'
-import axios from 'axios'
 
 export function NavBarComponent() {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products/categories")
-      .then((res) => setCategories(res.data))
-      .catch((error) => console.log(error));
-  }, [])
-
   return (
     <header className="container-fluid top-header">
       <nav className="navbar navbar-expand-lg mb-4">
@@ -28,19 +18,13 @@ export function NavBarComponent() {
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle menu-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
                 <ul className="dropdown-menu">
-                {categories.map((category, index) => {
-                return (
-                  <li key={index}><Link to={`/category/${category}`} className="dropdown-item drop-violet">{category}</Link></li>
-                );
-                })}
+                  <li><Link className="dropdown-item drop-violet" to={'/category/alimento'}>Alimento</Link></li>
+                  <li><Link className="dropdown-item drop-violet" to={'/category/bienestar'}>Bienestar</Link></li>
+                  <li><Link className="dropdown-item drop-violet" to={'/category/juguetes'}>Juguetes</Link></li>
                 </ul>
               </li>
               <CartWidgetComponent/>
             </ul>
-            <form className="d-flex w-auto gap-2" role="search">
-              <input className="form-control" type="Buscar" placeholder="¿Qué producto estás buscando?" aria-label="Buscar" id="form-imput-search" />
-              <button className="btn btn-outline-warning white" type="submit" id="search-button">Buscar</button>
-            </form>
           </div>
         </div>
       </nav>

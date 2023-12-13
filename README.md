@@ -1,8 +1,34 @@
-# React + Vite
+# Michigan Adopciones
+## Tienda de Mascotas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Entrega Final ReactJs - Comisión 50105
 
-Currently, two official plugins are available:
+Proyecto creado para el curso de ReactJS de Coderhouse
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tabla de contenido
+
+- Instalación
+- Autor
+
+## Instalación
+### Inicializacion local
+
+Descargar repositorio
+
+En carpeta local del proyecto ejecutar el siguiente comando para instalar las dependencias
+```bash
+npm i
+```
+
+### Ejecucion local
+
+En carpeta local del proyecto ejecutar el siguiente comando para instalar las dependencias
+
+
+```bash
+npm run dev
+```
+## Autor
+
+Daniel Armando Blanco Nolasco,
+Sr. Art Director

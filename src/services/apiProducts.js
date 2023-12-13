@@ -7,3 +7,7 @@ export function getAllProducts(limit = 5) {
 export function getSingleProduct(id) {
   return axios.get(`https://dummyjson.com/products/${id}`)
 }
+
+export function getProductsbyCategory(category) {
+  return axios.get(`https://dummyjson.com/products?category=${category}`)
+}

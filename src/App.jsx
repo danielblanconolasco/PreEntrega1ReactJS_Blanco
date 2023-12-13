@@ -1,14 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import MainLayout from "./layouts/MainLayout"
 import { MainRouter } from "./routes/MainRouter"
+import { CartProvider } from './Context/CartContext.jsx';
 
 function App() {
   return (
-    <div>
+    <CartProvider>
       < MainLayout>
         < MainRouter />
       </MainLayout>
-    </div>
+    </CartProvider>
   )
 }
 

@@ -1,13 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { LoaderComponent, useSingleProduct } from '../components'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { LoaderComponent, useSingleProduct, ItemQuantitySelector } from '../components'
 
 export const ItemDetailContainer = () => {
-  const { productId } = useParams();
+  const { productId } = useParams()
 
-  const { product, loading, error } = useSingleProduct(productId);
+  const { product, loading, error } = useSingleProduct('products', productId)
   
 
   return (
@@ -24,9 +22,9 @@ export const ItemDetailContainer = () => {
           <div className='col-12 col-sm-6'>
             <h2>{product.title}</h2>
             <h4>{product.brand}</h4>
+            <h3 className='bold'>{new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(product.price)}</h3>
             <p>{product.description}</p>
-            <p className='bold'>{product.price}</p>
-            <button type="button" className="btn btn-primary btn-sm btn-violet">Agregar al carrito <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></button>
+            <ItemQuantitySelector productId={productId}/>
           </div>
         </div>
       </div>

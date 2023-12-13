@@ -2,7 +2,7 @@ import React from 'react'
 import {ItemListContainer, useAllProducts, LoaderComponent} from "../components"
 
 export const Home = () => {
-    const { products , loading , error } = useAllProducts (5)
+    const { products , loading , error } = useAllProducts ("products")
     return (        
         loading ? (
             <LoaderComponent />
